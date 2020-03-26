@@ -8,3 +8,8 @@
 # 	5 - 5 и т. д.
 # 	необходимо посчитать: 8 * 1 + 7 * 2 + 4 * 3 + 6 * 4 + 5 * 5 .....
 # 	Задачу надо решить с использование list comprehension и функции sum() в ОДНУ строку.
+
+def func(thevalue): return sum([int(str(thevalue)[k]) * (k + 1) for k in range(len(str(
+    thevalue)))])
+
+print(func(874658734))

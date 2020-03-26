@@ -2,8 +2,4 @@
 # , а B, соответственно, на A. Замену можно производить ТОЛЬКО используя функцию replace().
 # В результате применения функции к исходной строке, функция должна вернуть строку: BBABAABBAAABA
 
-str = 'AABABBAABBBAB'
-
-str = str.replace('A', 'B')
-
-print(str)
+print(''.join([i.replace('A', 'B') if i == 'A' else i.replace('B', 'A') for i in "AABABBAABBBAB"]))
