@@ -2,10 +2,10 @@ height = int(input('\nPlease enter the height of figure:\t'))
 print()
 width = (height * 2) - 1
 
-print(' "A"')
+print(' "B"')
 for i in range(height):
     for k in range(width):
-        if k == height - 1 - i or k == height - 1 + i or i == height - 1:
+        if height - 1 - i <= k <= height - 1 + i:
             print('* ', end='')
         else:
             print('  ', end='')
