@@ -19,7 +19,7 @@ class Group:
         return [x.getName() for x in self.lstStudents]
 
     def getAvrGroupGrade(self):
-        temp = [x.getAverageGrade() for x in self.lstStudents()]
+        temp = [x.getAverageGrade() for x in self.lstStudents]
         return sum(temp) / len(temp)
 
 class Student:
