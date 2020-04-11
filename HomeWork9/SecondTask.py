@@ -4,11 +4,14 @@
 # направление сдвига (по умолчанию влево (False)).
 
 def moving(TheNumForMoving, Sdvigi, Direction):
-    if Direction:
-        TheNumForMoving = TheNumForMoving * (0.1 ** Sdvigi)
-        print(TheNumForMoving)
+    TheNumForMoving = str(TheNumForMoving)
+    if Direction == 0:
+        for i in range(Sdvigi):
+            TheNumForMoving = TheNumForMoving[1:] + TheNumForMoving[0]
+        return TheNumForMoving
     else:
-        TheNumForMoving = TheNumForMoving * (10 ** Sdvigi)
-        print(TheNumForMoving)
+        for i in range(Sdvigi):
+            TheNumForMoving = TheNumForMoving[-1] + TheNumForMoving[:len(TheNumForMoving)-1]
+        return TheNumForMoving
 
-moving(2, 4, False)
+print(moving(123456, 2, False))
